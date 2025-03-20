@@ -4,7 +4,10 @@ public class DefaultCountingOutRhymer {
 
     private int[] numbers = new int[12];
 
-    public int total = -1;
+
+    final static int FIRST = -1;
+    final static int SECOND  = 11;
+    public int total = FIRST;
 
     public void countIn(int in) {
         if (!isFull())
@@ -12,11 +15,11 @@ public class DefaultCountingOutRhymer {
     }
 
     public boolean callCheck() {
-        return total == -1;
+        return total == FIRST;
     }
 
     public boolean isFull() {
-        return total == 11;
+        return total == SECOND;
     }
 
     protected int peekaboo() {
