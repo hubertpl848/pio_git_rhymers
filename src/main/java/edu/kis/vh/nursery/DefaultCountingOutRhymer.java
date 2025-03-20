@@ -8,7 +8,8 @@ public class DefaultCountingOutRhymer {
 
     final static int FIRST = -1;
     final static int SECOND  = 11;
-    public int total = FIRST;
+    private int total = FIRST;
+
 
     public void countIn(int in) {
         if (!isFull())
