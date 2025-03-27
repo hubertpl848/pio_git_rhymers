@@ -4,11 +4,17 @@ public class DefaultCountingOutRhymer {
 
     private int[] numbers = new int[12];
 
+
     final static int LOOPS = 4;
 
     final static int FIRST = -1;
     final static int SECOND  = 11;
     public int total = FIRST;
+
+    public int getTotal() {
+        return total;
+    }
+
 
     public void countIn(int in) {
         if (!isFull())
@@ -35,4 +41,7 @@ public class DefaultCountingOutRhymer {
         return numbers[total--];
     }
 
+    public int[] getNumbers() {
+        return numbers;
+    }
 }
