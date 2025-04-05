@@ -3,6 +3,26 @@ package edu.kis.vh.nursery;
 import edu.kis.vh.nursery.factory.DefaultRhymersFactory;
 import edu.kis.vh.nursery.factory.RhymersFactory;
 
+/**
+ * A demonstration class for testing different types of rhymer implementations.
+ * This class provides a way to test various rhymer behaviors including standard,
+ * false, FIFO, and Hanoi rhymers.
+ * 
+ * The class contains:
+ * - A main method that initializes a default rhymer factory and runs tests
+ * - A private test method that demonstrates the functionality of different rhymers
+ * 
+ * The test includes:
+ * - Sequential number input for standard, false, and FIFO rhymers (1-14)
+ * - Random number input (0-19) for Hanoi rhymer
+ * - Output demonstration of all rhymers
+ * - Report of rejected numbers from Hanoi rhymer
+ * 
+ * @see RhymersFactory
+ * @see DefaultRhymersFactory
+ * @see DefaultCountingOutRhymer
+ * @see HanoiRhymer
+ */
 class RhymersDemo {
 
     public static void main(String[] args) {
