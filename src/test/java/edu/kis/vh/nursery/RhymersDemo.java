@@ -25,11 +25,27 @@ import edu.kis.vh.nursery.factory.RhymersFactory;
  */
 class RhymersDemo {
 
+    /**
+     * The main entry point of the Rhymers demonstration application.
+     * Creates a default factory and runs rhymer tests using the factory.
+     *
+     * @param args Command line arguments (not used)
+     */
     public static void main(String[] args) {
         RhymersFactory factory = new DefaultRhymersFactory();
         testRhymers(factory);
     }
     // Comment on test: Looks good to me :3
+    /**
+     * Tests different types of rhymers from the provided factory.
+     * The method creates four types of rhymers: standard, false, FIFO, and Hanoi.
+     * It then fills the first three rhymers with numbers 1 to 14,
+     * and the Hanoi rhymer with random numbers between 0 and 19.
+     * After filling, it prints all numbers from each rhymer (in the order they come out)
+     * and finally reports the total number of rejected values in the Hanoi rhymer.
+     *
+     * @param factory The factory used to create different types of rhymers
+     */
     private static void testRhymers(RhymersFactory factory) {
         DefaultCountingOutRhymer[] rhymers = { factory.getStandardRhymer(), factory.getFalseRhymer(),
                 factory.getFIFORhymer(), factory.getHanoiRhymer()};
